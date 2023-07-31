@@ -2,12 +2,12 @@ import React from 'react';
 import '../../shared/gray_img/style.css';
 import GrayImg from "../../shared/gray_img";
 
-const Planet = () => {
+const Planet = (props) => {
     return (
         <div>
-            <h4>Mercúrio</h4>
-            <p>Lorem Ipsum.... Lorem Ipsum.... Lorem Ipsum.... Lorem Ipsum....</p>
-            <GrayImg/>
+            <h4>{props.name}</h4>
+            <p>{props.description}</p>
+            <GrayImg img_url={props.img_url} />
         </div>
     );
 }

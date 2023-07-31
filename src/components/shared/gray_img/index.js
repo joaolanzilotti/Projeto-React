@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react';
 import './style.css'
 
-const GrayImg = () => {
+const GrayImg = (props) => {
     return (
         <img className="grayImg"
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/280px-Mercury_in_color_-_Prockter07-edit1.jpg"/>
+             src={props.img_url}/>
     );
 }
 export default GrayImg;
