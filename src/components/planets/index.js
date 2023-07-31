@@ -1,10 +1,15 @@
 import React, {Fragment} from 'react';
 import Planet from './planet';
 
+const showMessage = () => {
+    console.log('Evento!');
+}
+
 const Planets = () => {
     return (
         <Fragment>
             <h3>Planet List</h3>
+            <button onClick={showMessage}>Botao</button>
             <hr/>
             <Planet name="Mercúrio" description="Mercúrio é o menor planeta do universo!"
                     img_url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/280px-Mercury_in_color_-_Prockter07-edit1.jpg"
