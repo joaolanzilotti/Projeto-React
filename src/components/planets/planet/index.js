@@ -5,9 +5,6 @@ import DescriptionWithLink from "../../shared/description_with_link";
 
 const Planet = (props) => {
     const names = ['a', 'b', 'c', 'd', 'e', 'f']
-    const satelites = names.map((n) =>
-        <li>Satélite {n}</li>
-    )
 
 
     let title;
@@ -17,19 +14,21 @@ const Planet = (props) => {
         title = <h4>{props.name}</h4>
 
 
-        return (
-            <div>
-                {title}
-                <DescriptionWithLink description={props.description} link={props.link}/>
-                <GrayImg img_url={props.img_url}
-                gray={true}/>
+    return (
+        <div>
+            {title}
+            <DescriptionWithLink description={props.description} link={props.link}/>
+            <GrayImg img_url={props.img_url}
+                     gray={true}/>
 
-                <h4>Satélites</h4>
-                <ul>
-                    {satelites}
-                </ul>
-                <hr/>
-            </div>
-        );
+            <h4>Satélites</h4>
+            <ul>
+                {
+                    names.map((n) => <li>Satélite {n}</li>)
+                }
+            </ul>
+            <hr/>
+        </div>
+    );
 }
 export default Planet;
