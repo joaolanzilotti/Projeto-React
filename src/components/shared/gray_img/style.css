@@ -2,3 +2,7 @@
     width: 300px;
     filter: grayscale(100%);
 }
+
+.colorImg{
+    width: 300px;
+}

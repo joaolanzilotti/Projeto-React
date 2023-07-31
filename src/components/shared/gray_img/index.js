@@ -3,7 +3,7 @@ import './style.css'
 
 const GrayImg = (props) => {
     return (
-        <img className="grayImg"
+        <img className={props.gray ? 'grayImg' : 'colorImg'}
              src={props.img_url}/>
     );
 }
